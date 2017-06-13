@@ -92,7 +92,7 @@ elif PROFILE == 'prod':
                     {'host':'10.78.155.68','port':16340},
                     {'host':'10.78.155.70','port':16340},
                     {'host':'10.78.155.71','port':16340},
-                    {'host':'10.78.155.72','port':16340},
+                    {'host':'10.78.155.72','port':16341},
                     ]
     redis_expires = 86400
     # persist = ["hbase","hdfs","es"]
