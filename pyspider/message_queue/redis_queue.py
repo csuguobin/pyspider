@@ -34,7 +34,7 @@ class RedisQueue(object):
         """
 
         self.name = name
-        self.redis = StrictRedisCluster(startup_nodes=redis_nodes,max_connections = 16)
+        self.redis = StrictRedisCluster(startup_nodes=redis_nodes,max_connections = 256)
         # self.redis = redis.StrictRedis(host=host, port=port, db=db, password=password)
         self.maxsize = maxsize
         self.lazy_limit = lazy_limit
