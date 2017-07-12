@@ -71,7 +71,7 @@ class ProjectManager(object):
         instance = _class()
         instance.__env__ = env
         instance.project_name = project['name']
-        instance.project = project
+        instance.project = project.decode('gbk').encode('utf8')
 
         return {
             'loader': loader,
