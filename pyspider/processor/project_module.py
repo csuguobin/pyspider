@@ -71,7 +71,7 @@ class ProjectManager(object):
         instance = _class()
         instance.__env__ = env
         instance.project_name = project['name']
-        instance.project = project.decode('gbk').encode('utf8')
+        instance.project = project
 
         return {
             'loader': loader,
@@ -218,4 +218,7 @@ class ProjectLoader(object):
         script = self.project['script']
         if isinstance(script, six.text_type):
             return script.encode('utf8')
-        return script
+        try:
+            return script.decode('gbk').encode('utf8')#oracle数据库的编码是gbk
+        except:
+            return script
