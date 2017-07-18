@@ -220,6 +220,7 @@ class BaseHandler(object):
     schedule_fields = ('priority', 'retries', 'exetime', 'age', 'itag', 'force_update', 'auto_recrawl', 'cancel')
     fetch_fields = ('method', 'headers', 'data', 'connect_timeout', 'timeout', 'allow_redirects', 'cookies',
                     'proxy', 'etag', 'last_modifed', 'last_modified', 'save', 'js_run_at', 'js_script',
+                    'js_wait_time',#由于各个网站的响应时间不一样，动态设置js执行后的等待时间提高效率
                     'js_viewport_width', 'js_viewport_height', 'load_images', 'fetch_type', 'use_gzip', 'validate_cert',
                     'max_redirects', 'robots_txt')
     process_fields = ('callback', 'process_time_limit')
