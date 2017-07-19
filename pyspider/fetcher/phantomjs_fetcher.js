@@ -4,7 +4,7 @@
 // Created on 2014-10-29 22:12:14
 
 var port, server, service,
-  //wait_before_end = 1000,
+  wait_before_end = 1000,
   system = require('system'),
   webpage = require('webpage');
 
@@ -44,10 +44,10 @@ if (system.args.length !== 2) {
         script_result = null;
 
     var fetch = JSON.parse(request.postRaw);
-    var wait_before_end = fetch.js_wait_time;//crawl函数动态传入phantomjs等待的时间
-    if(!wait_before_end){
-    	wait_before_end = 1000;
-    }
+//    var wait_before_end = fetch.js_wait_time;//crawl函数动态传入phantomjs等待的时间
+//    if(!wait_before_end){
+//    	wait_before_end = 1000;
+//    }
     console.log(wait_before_end)
     console.debug(JSON.stringify(fetch, null, 2));
 
